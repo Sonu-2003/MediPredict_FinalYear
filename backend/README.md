@@ -1,6 +1,31 @@
-🚀 MediPredict Backend
+<p align="center">
+  <h1 align="center">🏥 MediPredict</h1>
+  <p align="center">
+    <b>AI-Powered Medical Cost Prediction & Insurance Estimation Platform</b>
+  </p>
+</p>
 
-<p align="center"> <img src="https://img.shields.io/badge/SpringBoot-3.x-brightgreen?style=for-the-badge\&logo=springboot"/> <img src="https://img.shields.io/badge/H2-Database-lightgrey?style=for-the-badge"/> <img src="https://img.shields.io/badge/ML-Microservice-orange?style=for-the-badge\&logo=tensorflow"/> <img src="https://img.shields.io/badge/Auth-Session--Based-purple?style=for-the-badge"/> <img src="https://img.shields.io/badge/Build-Maven-red?style=for-the-badge\&logo=apachemaven"/> <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge"/> </p>
+<p align="center">
+  <img src="https://img.shields.io/badge/SpringBoot-3.x-brightgreen?style=flat-square&logo=springboot"/>
+  <img src="https://img.shields.io/badge/H2-DATABASE-lightgrey?style=flat-square"/>
+  <img src="https://img.shields.io/badge/ML-Microservice-orange?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Auth-Session--Based-purple?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Build-Maven-red?style=flat-square&logo=apachemaven"/>
+  <img src="https://img.shields.io/badge/Status-Active-success?style=flat-square"/>
+</p>
+
+<p align="center">
+  <a href="#">Live Demo</a> •
+  <a href="#">Report Bug</a> •
+  <a href="#">Request Feature</a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Maintained-Yes-green?style=flat-square"/>
+</p>
+
+---
+
 
 🧠 Overview
 
