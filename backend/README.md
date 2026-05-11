@@ -11,7 +11,7 @@
   <img src="https://img.shields.io/badge/ML-Microservice-orange?style=flat-square"/>
   <img src="https://img.shields.io/badge/Auth-Session--Based-purple?style=flat-square"/>
   <img src="https://img.shields.io/badge/Build-Maven-red?style=flat-square&logo=apachemaven"/>
-  <img src="https://img.shields.io/badge/Status-Active-success?style=flat-square"/>
+  
 </p>
 
 <p align="center">
@@ -21,6 +21,7 @@
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/Status-Active-success?style=flat-square"/>
   <img src="https://img.shields.io/badge/Maintained-Yes-green?style=flat-square"/>
 </p>
 
