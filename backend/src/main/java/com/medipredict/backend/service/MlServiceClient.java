@@ -31,7 +31,14 @@ public class MlServiceClient {
     public MlPredictionResult predict(Map<String, Object> features, boolean returnProbabilities) {
         MlPredictionRequest request = new MlPredictionRequest(features, returnProbabilities);
 
+        if (!isHealthy()) {
+            System.out.println("⚠️ ML service not healthy → using fallback");
+            return fallbackPrediction(features);
+        }
+
         try {
+            System.out.println("➡️ Calling ML API: " + properties.getMlServiceBaseUrl() + "/predict");
+
             ResponseEntity<MlPredictionApiResponse> response = restTemplate.postForEntity(
                     properties.getMlServiceBaseUrl() + "/predict",
                     request,
@@ -39,8 +46,10 @@ public class MlServiceClient {
             );
 
             MlPredictionApiResponse body = response.getBody();
+
             if (body == null || !body.isSuccess() || body.getPrediction() == null) {
-                return fallbackPrediction(features);
+                System.out.println("❌ Invalid ML response received");
+                throw new ExternalServiceException("Invalid ML response");
             }
 
             MlPredictionResult result = new MlPredictionResult();
@@ -50,8 +59,15 @@ public class MlServiceClient {
             result.setSource("ml_service");
             result.setFallbackUsed(false);
             result.setBreakdown(buildBreakdown(features, result.getPrediction(), false));
+
+            System.out.println("✅ ML prediction successful");
+            System.out.println("📊 Source: ml_service");
+
             return result;
-        } catch (RestClientException exception) {
+
+        } catch (RestClientException ex) {
+            System.out.println("❌ ML API call failed → using fallback");
+            ex.printStackTrace();
             return fallbackPrediction(features);
         }
     }
